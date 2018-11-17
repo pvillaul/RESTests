@@ -1,5 +1,0 @@
-mvn sonar:sonar \
-  -Dsonar.projectKey=pvillaul_RESTests \
-  -Dsonar.organization=pvillaul-github \
-  -Dsonar.host.url=https://sonarcloud.io \
-  -Dsonar.login=423668b2ed24bd2a0191a0abea0ea730e98ef8df
