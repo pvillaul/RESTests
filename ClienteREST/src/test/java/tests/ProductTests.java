@@ -13,6 +13,7 @@ import environment.EnvironmentManager;
 import environment.RunEnvironment;
 import junit.framework.Assert;
 
+@SuppressWarnings("deprecation")
 public class ProductTests {
 	@Before
     public void startBrowser() {
