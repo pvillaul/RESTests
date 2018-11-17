@@ -23,6 +23,9 @@ import com.example.training3.models.Product;
 
 @Controller
 public class ProductList {
+	
+	private static final String ADDFORM = "addForm";
+	
 	@Autowired
     private RestTemplate restTemplate = new RestTemplate();
 
@@ -66,7 +69,7 @@ public class ProductList {
 	@Secured({"ROLE_ADMIN"})
 	@GetMapping("/addForm")
 	public String addProd(@ModelAttribute Product product) {
-		return "addForm";
+		return ADDFORM;
 	}
 	
 	@Secured({"ROLE_ADMIN"})

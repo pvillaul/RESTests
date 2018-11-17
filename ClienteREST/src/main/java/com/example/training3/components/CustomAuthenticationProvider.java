@@ -29,7 +29,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider{
 			throw new BadCredentialsException("User not found");
 		}
 		
-		if (!new BCryptPasswordEncoder().matches(password, user.getContraseña())) {
+		if (!new BCryptPasswordEncoder().matches(password, user.getPassword())) {
 			throw new BadCredentialsException("Wrong password");
 		}
 
