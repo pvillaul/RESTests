@@ -12,19 +12,19 @@ import ch.qos.logback.classic.Logger;
 @Service
 public class Logs {
     @Autowired
-	private Logger LOGGER = (Logger) LoggerFactory.getLogger(ProductController.class);
+	private Logger logs = (Logger) LoggerFactory.getLogger(ProductController.class);
 
     public void writeConsole(ProductModel value) {
 
-        LOGGER.trace(String.format("Product with code %s is trace", value.getCode()));
+    	logs.trace("Product with code" + value.getCode() + "is trace");
 
-        LOGGER.debug(String.format("Product with code %s is sent", value.getCode()));
+    	logs.debug("Product with code" + value.getCode() + "is sent");
 
-        LOGGER.info("Product Added");
+    	logs.info("Product Added");
 
-        LOGGER.warn("There is no product");
+    	logs.warn("There is no product");
 
-        LOGGER.error("Error in database");
+    	logs.error("Error in database");
 
     }
 }
